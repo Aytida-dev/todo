@@ -1,0 +1,249 @@
+body{
+    font-family: indie flower;
+    background-image: url("images/Free\ Photo\ _\ Dark\ blue\ wall\ in\ an\ empty\ room\ with\ a\ wooden\ floor.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover ; 
+    
+     background-color: hsl(229, 57%, 11%); 
+     color: aliceblue; 
+     transition: background-image 1s;
+     
+
+ }  
+main{
+    position: relative;
+}
+/* mid section */
+ .eachTodo{
+    display: grid;
+    grid-template-columns: 30px 1.5fr 1fr 20px ;
+    column-gap: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+   height: 30px;
+   padding-top: 2%;
+   transition: background-color 0.3s;
+   
+
+}
+.eachTodo:hover{
+    background-color: rgba(128, 128, 128, 0.205);
+}
+.remove{
+    background-image: url("images/i.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border: none;
+    /* margin: ; */
+    
+}
+.mid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+h1{
+    text-align: center;
+    position: relative;
+}
+.tasksComp{
+    position: relative;
+}
+.onhand{
+    position: relative;
+    transition: background-image 0.7s;
+    
+}
+.onhand::after{
+    position: absolute;
+    border: 1px solid hsl(228, 56%, 26%);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    content: " ";
+    top: 80px;
+    right: -9px;
+    height: 100%;
+
+    
+}
+.onhand:hover,.tasksComp:hover{
+    
+    background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(128, 128, 128, 0.205));
+    border-radius: 5px;
+}
+
+h1::after{
+    position: absolute;
+    border: 1px solid hsl(228, 56%, 26%);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    content: " ";
+    top: 50px;
+    right: 25%;
+    width: 50%;
+}
+h1,div:hover{
+    cursor:default;
+}
+
+.remove:hover{
+    cursor: pointer;
+    background-image: url("images/i2.png");
+}
+.todoName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: -20px;
+}
+
+#resetTodo{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    border: none;
+    background-color: hsl(227, 64%, 21%);
+    border-bottom-left-radius:20px ;
+    border-top-left-radius:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+   
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+#resetTodo:hover img{
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+#resetTodo:active img{
+    transform: rotate(20deg);
+    transition: transform 0.1s;
+}
+#resetComp{
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-bottom-right-radius:20px ;
+    border-top-right-radius:20px ;
+    background-color: hsl(227, 64%, 21%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resetComp:hover img{
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+#resetComp:active img{
+    transform: rotate(20deg);
+    transition: transform 0.1s
+}
+
+/*top section*/
+
+#newTodo{
+    background-color:  hsla(229, 7%, 55%, 0.205);
+    width: 50%;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    font-family: caveat;
+    font-size: 20px;
+}
+#newTodo:focus{
+    background-color: hsla(229, 7%, 55%, 0.263);
+    outline: none;
+    
+}
+#newTodo:hover,#newDate:hover{
+    background-color: hsla(229, 7%, 55%, 0.263);
+}
+#newDate{
+    background-color:  #84879434;
+    color: aliceblue;
+    font-family: caveat;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color-scheme:dark ;
+    margin-left: 90px;
+    height: 20px;
+}
+#newDate:focus{
+    background-color: hsla(229, 7%, 55%, 0.263);
+    outline: none;
+    color: aliceblue;
+    font-family: caveat;
+}
+.add{
+    width: 80%;
+    background-color: transparent;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    /* color-scheme: dark; */
+    background-image: url("images/add.png");
+    background-repeat: no-repeat;
+    background-size: 30px 70%;
+    background-position: center center;
+    transition: background-size 0.1s;
+    
+}
+.button{
+    display: flex;
+    justify-content:center ;
+    
+}
+.add:hover{
+    background-color: hsla(229, 7%, 55%, 0.205);
+    cursor: pointer;
+}
+.add:active{
+    background-size: 35px 80%;
+}
+
+
+
+
+@media(max-width:900px){
+    body{
+        background-image: url("images/bg-mobile.png");
+        background-size: cover;   
+    }
+    .mid{
+        grid-template-columns: 1fr;
+    }
+}
+@media  (max-width:450px){
+    /* .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+     */
+     #newTodo{
+         width: 90%;
+         margin-left:3% ;
+     }
+     #newDate{
+         margin-left: 3%;
+     }
+}

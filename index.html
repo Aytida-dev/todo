@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400;700&family=Indie+Flower&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/z.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Todo</title>
+</head>
+
+<body>
+    <main>
+        <section class="top">
+            <h2>What you wanna do : <input type="text" name="" id="newTodo" /></h2>
+            <h2>And , when : <input type="datetime-local" name="" id="newDate" /></h2>
+            <div class="button"><button onclick="addTodo()" class="add"></button></div>
+        </section>
+        <section class="mid">
+            <div class="onhand">
+
+                <button id="resetTodo" onclick="resetTodo()"><img src="images/r.png" alt=""></button>
+                <h1>Tasks on hand</h1>
+                <div id="todos"></div>
+            </div>
+            <div class="tasksComp">
+                <button id="resetComp" onclick="resetComp()"><img src="images/r.png" alt=""></button>
+                <h1>Tasks completed</h1>
+                <div id="completeTodos"></div>
+            </div>
+        </section>
+
+       
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
